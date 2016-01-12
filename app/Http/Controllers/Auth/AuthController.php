@@ -1,10 +1,10 @@
 <?php
 
-namespace Login\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Login\User;
+use App\User;
 use Validator;
-use Login\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -37,7 +37,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        // $this->middleware('guest', ['except' => 'logout']);
     }
 
     /**

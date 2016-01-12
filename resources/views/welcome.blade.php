@@ -9,6 +9,8 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <meta name="csrf-token" content="[% csrf_token() %]">
+
         <title>Laravel</title>
 
         <link rel="stylesheet" href="[% asset('css/all.css') %]">
@@ -30,7 +32,7 @@
                 </md-button>
 
                 <h2>
-                  <span>Application</span>
+                  <span>Welcome, {{ user.name }}</span>
                 </h2>
 
                 <span flex></span>
@@ -45,30 +47,39 @@
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
             <md-list>
 
-                <md-list-item ng-href="/#/" ng-click="toggle()">
+                <md-list-item ng-href="/#/home" ng-click="toggle()">
                     <p>Home</p>
                 </md-list-item>
 
-                @if (Auth::check())
+                <div ng-if="! check()">
 
-                    <md-list-item ng-href="/#/" ng-click="toggle()">
-                        <p>Logout</p>
-                    </md-list-item>
-
-                @else
-
-                    <md-list-item ng-href="/#/auth/login" ng-click="toggle()">
+                    <md-list-item ng-href="/#/login" ng-click="toggle()">
                         <p>Login</p>
                     </md-list-item>
 
-                    <md-list-item ng-href="/#/auth/register" ng-click="toggle()">
+                    <md-list-item ng-href="/#/register" ng-click="toggle()">
                         <p>Register</p>
                     </md-list-item>
 
+                </div>
+                <div ng-if="check()">
+
+                    <md-list-item ng-href="#" ng-click="logout()">
+                        <p>Logout</p>
+                    </md-list-item>
+
+                </div>
+
+                @if (Auth::check())
+                    Logged in.
+                @else
+                    Logged out.
                 @endif
 
             </md-list>
         </md-sidenav>
+
+        {{ laravel() }}
 
         <ng-view>
         </ng-view>

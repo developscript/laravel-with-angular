@@ -6,22 +6,14 @@ app
         email: '',
         password: '',
         password_confirmation: '',
-        remember: false,
+        remember_token: false,
     };
 
     $scope.login = function (credentials) {
+        return AuthService.login(credentials);
+    };
 
-        console.log(credentials);
-
-        AuthService
-        .login(credentials)
-        .then(
-            function (response) {
-                console.log(response, 'success');
-            },
-            function (response) {
-                console.log(response, 'failure');
-            }
-        );
+    $scope.register = function (credentials) {
+        return AuthService.register(credentials);
     };
 }]);

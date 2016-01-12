@@ -35,10 +35,13 @@ elixir(function(mix) {
         [
             bower + 'angular/angular.min.js',
             bower + 'angular-route/angular-route.min.js',
+            bower + 'angular-cookies/angular-cookies.min.js',
             bower + 'angular-material/angular-material.min.js',
             bower + 'angular-animate/angular-animate.min.js',
             bower + 'angular-aria/angular-aria.min.js',
             bower + 'angular-messages/angular-messages.min.js',
+            // satellizer.
+            bower + 'satellizer/satellizer.min.js',
             '**'
         ],
         'public/js/app.js'

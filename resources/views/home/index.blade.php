@@ -1,3 +1,3 @@
 <h1>
-    Home
+    Home [% Auth::check() %]
 </h1>

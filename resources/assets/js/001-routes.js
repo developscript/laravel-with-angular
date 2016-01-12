@@ -1,16 +1,30 @@
 app
-.config(function ($routeProvider) {
+.config(function ($routeProvider, $authProvider) {
+
+    $authProvider.loginUrl = '/api/login';
+    $authProvider.signupUrl = '/api/register';
+
     $routeProvider
-    .when('/auth/login', {
-        templateUrl: '/auth/login',
-        controller: 'AuthController',
-    })
-    .when('/auth/register', {
-        templateUrl: '/auth/register',
-        controller: 'AuthController',
-    })
-    .when('/auth/logout', {
-        templateUrl: '/auth/logout',
-        controller: 'AuthController',
-    });
+    .when(
+        '/',
+        {
+            templateUrl: '/view/home',
+            controller: 'HomeController',
+        }
+    )
+    .when(
+        '/login', 
+        {
+            templateUrl: '/view/login',
+            controller: 'AuthController',
+        }
+    )
+    .when(
+        '/register',
+        {
+            templateUrl: '/view/register',
+            controller: 'AuthController',
+        }
+    )
+    .otherwise('/');
 });

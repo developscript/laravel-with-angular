@@ -20,7 +20,7 @@
             "database"
         ],
         "psr-4": {
-            "Login\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

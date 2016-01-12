@@ -1,46 +1,36 @@
 app
-.factory('AuthService', function ($http) {
-
+.factory('AuthService', function ($http, $location, $auth) {
     var auth = {};
 
+    auth.check = function () {
+        return $auth.isAuthenticated();
+    };
+
     auth.login = function (credentials) {
-        return $http
-        .post(
-            [
-                '/auth/login',
-                credentials
-            ]
+        return $auth
+        .login(
+            credentials
         )
-        .then(
-            function (response) {
-                return response;
-            }
-        );
+        .then(function (response) {
+            console.log(response);
+            $location.path('/');
+        });
     };
 
     auth.register = function (data) {
-        return $http
-        .post(
-            [
-                '/auth/register',
-                data
-            ]
+        return $auth
+        .signUp(
+            credentials
         )
-        .then(
-            function (response) {
-                return response;
-            }
-        );
+        .then(function (response) {
+            console.log(response);
+            $location.path('/');
+        });
     };
 
     auth.logout = function () {
-        return $http
-        .get('/auth/logout')
-        .then(
-            function (response) {
-                return response;
-            }
-        );
+        return $auth
+            .logout();
     };
 
     return auth;
