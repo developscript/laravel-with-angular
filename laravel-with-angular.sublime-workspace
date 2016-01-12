@@ -1,0 +1,222 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rafael/www/laravel-with-angular"
+	],
+	"file_history":
+	[
+		"/home/rafael/www/angular2/app/boot.js",
+		"/home/rafael/www/angular2/app/hero.component.ts",
+		"/home/rafael/www/angular2/index.html",
+		"/home/rafael/www/angular2/app/app.component.js",
+		"/home/rafael/www/angular2/app/hero.ts",
+		"/home/rafael/www/angular2/app/app.component.ts",
+		"/home/rafael/www/angular2/app/boot.ts",
+		"/home/rafael/www/angular2/app/index.ts",
+		"/home/rafael/www/angular2/package.json",
+		"/home/rafael/www/angular2/tsconfig.json",
+		"/home/rafael/www/sol/app/Providers/AppServiceProvider.php",
+		"/home/rafael/www/sol/vendor/laravel/framework/src/Illuminate/Support/Facades/Blade.php",
+		"/home/rafael/www/sol/resources/assets/sass/000-app.scss",
+		"/home/rafael/www/sol/resources/assets/js/003-controllers/000-application.js",
+		"/home/rafael/www/sol/resources/views/welcome.blade.php",
+		"/home/rafael/www/sol/resources/assets/js/000-app.js",
+		"/home/rafael/www/sol/resources/assets/js/001-routes.js",
+		"/home/rafael/www/sol/gulpfile.js",
+		"/home/rafael/www/sol/resources/assets/sass/app.scss",
+		"/home/rafael/www/sol/resources/assets/js/app.js",
+		"/home/rafael/www/sol/.bowerrc",
+		"/home/rafael/www/sol/bower.json",
+		"/home/rafael/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/rafael/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"{ ",
+			" }",
+			"\"id\"",
+			"\"name\"",
+			"ng-cloak",
+			"ng-cloack",
+			"style=\"color: white;\"",
+			"Illuminate",
+			" ng-click=\"toggleSidenav()\"",
+			"line"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "laravel-with-angular.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"app/selected-hero.component.ts"
+			],
+			[
+				"app.compon",
+				"app/app.component.ts"
+			],
+			[
+				"boot.ts",
+				"app/boot.ts"
+			],
+			[
+				"welcome.blade",
+				"resources/views/welcome.blade.php"
+			],
+			[
+				"appservice",
+				"app/Providers/AppServiceProvider.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
