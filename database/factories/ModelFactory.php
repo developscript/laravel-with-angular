@@ -13,8 +13,8 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => 'rafael',
-        'email' => 'rafael@gmail.com',
+        'name' => 'laravel',
+        'email' => 'laravel@gmail.com',
         'password' => bcrypt('laravel'),
         'remember_token' => str_random(10),
     ];

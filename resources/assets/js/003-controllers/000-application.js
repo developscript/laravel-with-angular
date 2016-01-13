@@ -1,21 +1,31 @@
 app
-.controller('ApplicationController', ['$scope', '$cookies', '$mdSidenav', 'AuthService', function ($scope, $cookies, $mdSidenav, AuthService) {
-    $scope.title = 'Application';
+.controller('ApplicationController',
+    [
+        '$scope',
+        '$cookies',
+        '$location',
+        '$mdSidenav',
+        'AuthService',
+        function ($scope, $cookies, $location, $mdSidenav, AuthService) {
+            $scope.title = 'Application';
 
-    $scope.toggle = function () {
-        $mdSidenav('left').toggle();
-    }
+            $scope.toggle = function () {
+                $mdSidenav('left').toggle();
+            }
 
-    $scope.laravel = function ()
-    {
-        return $cookies.get('XSRF-TOKEN');
-    }
+            $scope.check = function () {
+                return AuthService.check();
+            }
 
-    $scope.logout = function () {
-        return AuthService.logout();
-    }
+            $scope.logout = function () {
+                var success = AuthService.logout();
 
-    $scope.check = function () {
-        return AuthService.check();
-    }
-}]);
+                $scope.toggle();
+
+                if (success) {
+                    $location.path('/home');
+                }
+            }
+        }
+    ]
+);

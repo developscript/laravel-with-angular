@@ -4,49 +4,17 @@
 		"selected_items":
 		[
 			[
-				"aut",
-				"AuthService"
+				"thr",
+				"throttles"
 			],
 			[
-				"Auth",
-				"AuthService"
+				"Authe",
+				"AuthenticatesTokens"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "app/Http/routes.php",
-			"settings":
-			{
-				"buffer_size": 1748,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "vendor/tymon/jwt-auth/src/Providers/JWTAuthServiceProvider.php",
-			"settings":
-			{
-				"buffer_size": 7601,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Kernel.php",
-			"settings":
-			{
-				"buffer_size": 1606,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/Auth/AuthController.php",
-			"settings":
-			{
-				"buffer_size": 1987,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -85,49 +53,81 @@
 		"/home/rafael/www/laravel-with-angular/app/Http",
 		"/home/rafael/www/laravel-with-angular/app/Http/Controllers",
 		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/Auth",
-		"/home/rafael/www/laravel-with-angular/app/Providers",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/Authentication",
+		"/home/rafael/www/laravel-with-angular/app/Http/Requests",
+		"/home/rafael/www/laravel-with-angular/app/Jobs",
+		"/home/rafael/www/laravel-with-angular/app/Traits",
 		"/home/rafael/www/laravel-with-angular/config",
+		"/home/rafael/www/laravel-with-angular/database",
+		"/home/rafael/www/laravel-with-angular/database/factories",
 		"/home/rafael/www/laravel-with-angular/resources",
 		"/home/rafael/www/laravel-with-angular/resources/assets",
+		"/home/rafael/www/laravel-with-angular/resources/assets/css",
 		"/home/rafael/www/laravel-with-angular/resources/assets/js",
 		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers",
 		"/home/rafael/www/laravel-with-angular/resources/views",
 		"/home/rafael/www/laravel-with-angular/resources/views/auth",
+		"/home/rafael/www/laravel-with-angular/resources/views/errors",
 		"/home/rafael/www/laravel-with-angular/resources/views/home",
-		"/home/rafael/www/laravel-with-angular/storage",
-		"/home/rafael/www/laravel-with-angular/vendor"
+		"/home/rafael/www/laravel-with-angular/resources/views/profile",
+		"/home/rafael/www/laravel-with-angular/resources/views/vendor"
 	],
 	"file_history":
 	[
-		"/home/rafael/www/laravel-with-angular/config/auth.php",
-		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
-		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/JWTAuth.php",
-		"/home/rafael/www/laravel-with-angular/app/Providers/AuthServiceProvider.php",
-		"/home/rafael/www/laravel-with-angular/app/Providers/AppServiceProvider.php",
-		"/home/rafael/www/laravel-with-angular/config/app.php",
-		"/home/rafael/www/laravel-with-angular/composer.json",
-		"/home/rafael/www/laravel-with-angular/resources/assets/js/001-routes.js",
-		"/home/rafael/www/laravel-with-angular/vendor/irazasyed/jwt-auth-guard/src/JwtAuthGuardServiceProvider.php",
-		"/home/rafael/www/laravel-with-angular/app/Http/Kernel.php",
-		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/000-application.js",
-		"/home/rafael/www/laravel-with-angular/resources/assets/js/002-factory.js",
-		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
-		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/Auth/AuthController.php",
-		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/AuthController.php",
-		"/home/rafael/www/laravel-with-angular/resources/views/auth/register.blade.php",
-		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/001-auth.js",
 		"/home/rafael/www/laravel-with-angular/resources/views/welcome.blade.php",
-		"/home/rafael/www/laravel-with-angular/resources/views/auth/login.blade.php",
-		"/home/rafael/www/laravel-with-angular/readme.md",
-		"/home/rafael/www/laravel-with-angular/config/database.php",
-		"/home/rafael/www/laravel-with-angular/.env",
-		"/home/rafael/www/laravel-with-angular/resources/assets/js/000-app.js",
-		"/home/rafael/www/laravel-with-angular/app/Http/routes.php",
-		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/HomeController.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/css/000-sass.css.map",
+		"/home/rafael/www/laravel-with-angular/app/Traits/AuthenticatesTokens.php",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/Authentication/AuthController.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ThrottlesLogins.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/002-factories.js",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-services.js",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/001-run.js",
+		"/home/rafael/www/laravel-with-angular/database/factories/ModelFactory.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Cache/RateLimiter.php",
+		"/home/rafael/www/laravel-with-angular/node_modules/laravel-elixir/node_modules/gulp-less/node_modules/less/test/css/globalVars/simple.css",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/Auth/AuthController.php",
 		"/home/rafael/www/laravel-with-angular/resources/views/home/index.blade.php",
+		"/home/rafael/www/laravel-with-angular/app/Http/routes.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/000-app.js",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/ProfileController.php",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/JWTAuth.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/001-auth.js",
 		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/002-home.js",
-		"/home/rafael/www/laravel-with-angular/bootstrap/app.php",
-		"/home/rafael/www/laravel-with-angular/resources/views/auth/index.blade.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/000-application.js",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/004-routes.js",
+		"/home/rafael/www/laravel-with-angular/resources/views/profile/index.blade.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/003-profile.js",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/Middleware/GetUserFromToken.php",
+		"/home/rafael/www/laravel-with-angular/resources/views/auth/login.blade.php",
+		"/home/rafael/www/laravel-with-angular/config/jwt.php",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/Middleware/BaseMiddleware.php",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/Middleware/RefreshToken.php",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/Providers/Auth/AuthInterface.php",
+		"/home/rafael/www/laravel-with-angular/vendor/tymon/jwt-auth/src/Facades/JWTAuth.php",
+		"/home/rafael/www/laravel-with-angular/config/app.php",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/HomeController.php",
+		"/home/rafael/www/laravel-with-angular/app/Traits/AuthenticatesTokens",
+		"/home/rafael/www/laravel-with-angular/node_modules/laravel-elixir/node_modules/browser-sync/node_modules/foxy/node_modules/http-proxy/node_modules/requires-port/package.json",
+		"/home/rafael/www/laravel-with-angular/app/Traits",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/001-routes.js",
+		"/home/rafael/www/laravel-with-angular/app/Http/Kernel.php",
+		"/home/rafael/www/laravel-with-angular/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/home/rafael/www/laravel-with-angular/gulpfile.js",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/TokenController.php",
+		"/home/rafael/www/laravel-with-angular/composer.json",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/002-factory.js",
+		"/home/rafael/www/laravel-with-angular/resources/views/auth/register.blade.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Validation/PresenceVerifierInterface.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php",
+		"/home/rafael/www/laravel-with-angular/vendor/laravel/framework/src/Illuminate/Contracts/Auth/StatefulGuard.php",
+		"/home/rafael/www/laravel-with-angular/resources/assets/js/003-controllers/003-logout.js",
+		"/home/rafael/www/laravel-with-angular/app/Http/Controllers/AuthController.php",
+		"/home/rafael/www/laravel-with-angular/bower.json",
 		"/home/rafael/www/angular2/app/boot.js",
 		"/home/rafael/www/angular2/app/hero.component.ts",
 		"/home/rafael/www/angular2/index.html",
@@ -155,7 +155,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 71.0
 	},
 	"find_in_files":
 	{
@@ -169,8 +169,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"validate",
 			"service",
-			"$scope",
+			"                \n",
+			"-f",
+			"login",
 			"{ ",
 			" }",
 			"\"id\"",
@@ -198,129 +201,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/Http/routes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1316,
-								1316
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 760.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "vendor/tymon/jwt-auth/src/Providers/JWTAuthServiceProvider.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7601,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								338,
-								338
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Kernel.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1606,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1449,
-								1449
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 660.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/Auth/AuthController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								529,
-								529
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -330,7 +212,7 @@
 	},
 	"input":
 	{
-		"height": 38.0
+		"height": 71.0
 	},
 	"layout":
 	{
@@ -359,6 +241,10 @@
 	{
 		"height": 0.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 198.0
+	},
 	"pinned_build_system": "",
 	"project": "laravel-with-angular.sublime-project",
 	"replace":
@@ -373,36 +259,84 @@
 		"selected_items":
 		[
 			[
-				"jwtauthguardserviceprovider",
-				"vendor/irazasyed/jwt-auth-guard/src/JwtAuthGuardServiceProvider.php"
+				"authenticatestokens",
+				"app/Traits/AuthenticatesTokens.php"
+			],
+			[
+				"throttleslogins",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/ThrottlesLogins.php"
 			],
 			[
 				"",
-				"app/Http/Kernel.php"
+				"app/Traits/AuthenticatesTokens.php"
 			],
 			[
-				"authenticatesusers",
-				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php"
+				"authetokens",
+				"app/Traits/AuthenticatesTokens.php"
 			],
 			[
 				"authenticatesandregistersusers",
 				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php"
 			],
 			[
-				"routes.",
-				"app/Http/routes.php"
+				"redirectsusers",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php"
 			],
 			[
-				"app.php",
-				"bootstrap/app.php"
+				"authenticatesusers",
+				"vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php"
+			],
+			[
+				"routes.js",
+				"resources/assets/js/004-routes.js"
+			],
+			[
+				"serivces.js",
+				"resources/assets/js/003-services.js"
+			],
+			[
+				"jwtauth",
+				"vendor/tymon/jwt-auth/src/Providers/Auth/AuthInterface.php"
+			],
+			[
+				"requiretoken",
+				"node_modules/laravel-elixir/node_modules/browser-sync/node_modules/foxy/node_modules/http-proxy/node_modules/requires-port/package.json"
+			],
+			[
+				"cation/authcontro",
+				"app/Http/Controllers/Authentication/AuthController.php"
+			],
+			[
+				"authinterface",
+				"vendor/tymon/jwt-auth/src/Providers/Auth/AuthInterface.php"
+			],
+			[
+				"jwt",
+				"vendor/tymon/jwt-auth/src/JWTAuth.php"
+			],
+			[
+				"cation/authcontrol",
+				"app/Http/Controllers/Authentication/AuthController.php"
+			],
+			[
+				"presenceverifierinterface",
+				"vendor/laravel/framework/src/Illuminate/Validation/PresenceVerifierInterface.php"
+			],
+			[
+				"baseverifier",
+				"vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php"
+			],
+			[
+				"authcontroller",
+				"app/Http/Controllers/Auth/AuthController.php"
 			],
 			[
 				"routes.php",
 				"app/Http/routes.php"
 			],
 			[
-				"welcome.blade",
-				"resources/views/welcome.blade.php"
+				"authcontro",
+				"app/Http/Controllers/Auth/AuthController.php"
 			],
 			[
 				"app.compon",
@@ -411,6 +345,10 @@
 			[
 				"boot.ts",
 				"app/boot.ts"
+			],
+			[
+				"welcome.blade",
+				"resources/views/welcome.blade.php"
 			],
 			[
 				"appservice",
@@ -443,7 +381,7 @@
 	},
 	"show_minimap": false,
 	"show_open_files": false,
-	"show_tabs": true,
+	"show_tabs": false,
 	"side_bar_visible": true,
 	"side_bar_width": 303.0,
 	"status_bar_visible": false,

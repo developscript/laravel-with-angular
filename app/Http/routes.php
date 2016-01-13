@@ -28,45 +28,34 @@ Route::get('/', function () {
 
 Route::group(
     [
-        'prefix' => 'view',
+        'middleware' => [
+            'web'
+        ],
     ],
     function () {
         //
         Route::group(
             [
-                'middleware' => [
-                    'web'
-                ],
+                'prefix' => 'view',
             ],
             function () {
                 //
                 Route::get('/home', 'HomeController@index');
 
-                Route::get('/login', 'Auth\AuthController@getLogin');
+                Route::get('/login', 'Authentication\AuthController@getLogin');
                 Route::get('/register', 'Auth\AuthController@getRegister');
+
+                Route::get('/profile', 'ProfileController@getIndex');
             }
         );
-    }
-);
-
-Route::group(
-    [
-        'prefix' => 'api',
-    ],
-    function () {
-        //
-        Route::post('/login', 'Auth\AuthController@postLogin');
-        Route::post('/register', 'Auth\AuthController@postRegister');
-
         Route::group(
             [
-                'middleware' => [
-                    'auth'
-                ]
+                'prefix' => 'api',
             ],
             function () {
                 //
-                Route::get('/logout', 'Auth\AuthController@getLogout');
+                Route::post('/login', 'Authentication\AuthController@postLogin');
+                Route::post('/register', 'Authentication\AuthController@postRegister');
             }
         );
     }

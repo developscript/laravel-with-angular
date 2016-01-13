@@ -438,7 +438,106 @@ var app = angular.module(
 );
 
 app
-.config(function ($routeProvider, $authProvider) {
+.run(function ($rootScope, $location, RouteService) {
+    $rootScope.$on('$routeChangeStart', function (event, next) {
+        if (RouteService.cannot(next)) {
+            return $location.path('/');
+        }
+        
+        return next;
+    });
+});
+
+app
+.factory('AuthService', function ($auth) {
+    var service = {};
+
+    service.check = function () {
+        return $auth.isAuthenticated();
+    };
+
+    service.signin = function (token) {
+        return $auth.setToken(token);
+    };
+
+    service.login = function (credentials) {
+        return $auth.login(credentials);
+    };
+
+    service.register = function (data) {
+        return $auth.signup(data);
+    };
+
+    service.logout = function () {
+        return $auth.logout();
+    };
+
+    return service;
+})
+.factory('RouteService', ['$route', 'AuthService', function ($route, AuthService) {
+    var service = {};
+
+    service.resolve = function (route) {
+        if (typeof(route) === 'string') {
+            return $route
+                .routes[name]
+                .token;
+        }
+
+        return route.token;
+    };
+
+    service.can = function (route) {
+        var token = service.resolve(route);
+
+        if (undefined === token) {
+            return true;
+        }
+        if (token == true && ! AuthService.check()) {
+            return false;
+        }
+        if (token == false && AuthService.check()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    service.cannot = function (route) {
+        return ! service.can(route);
+    }
+
+    return service;
+}]);
+
+app
+.service('RequestInterceptor', function ($q, $injector) {
+    var interceptor = {};
+
+    interceptor.responseError = function (response) {
+        var error = response.data.error,
+            errors = [
+                'token_not_provided',
+                'token_expired',
+                'token_invalid',
+                'user_not_found',
+            ];
+
+        if (errors.indexOf(error) !== -1) {
+            $injector
+                .get('AuthService')
+                .logout();
+        }
+
+        return $q.reject(response);
+    }
+
+    return interceptor;
+});
+
+app
+.config(function ($httpProvider, $routeProvider, $authProvider) {
+    $httpProvider.interceptors.push('RequestInterceptor');
 
     $authProvider.loginUrl = '/api/login';
     $authProvider.signupUrl = '/api/register';
@@ -452,10 +551,11 @@ app
         }
     )
     .when(
-        '/login', 
+        '/login',
         {
             templateUrl: '/view/login',
             controller: 'AuthController',
+            token: false,
         }
     )
     .when(
@@ -463,73 +563,54 @@ app
         {
             templateUrl: '/view/register',
             controller: 'AuthController',
+            token: false,
+        }
+    )
+    .when(
+        '/profile',
+        {
+            templateUrl: '/view/profile',
+            controller: 'ProfileController',
+            token: true,
         }
     )
     .otherwise('/');
 });
 
 app
-.factory('AuthService', function ($http, $location, $auth) {
-    var auth = {};
+.controller('ApplicationController',
+    [
+        '$scope',
+        '$cookies',
+        '$location',
+        '$mdSidenav',
+        'AuthService',
+        function ($scope, $cookies, $location, $mdSidenav, AuthService) {
+            $scope.title = 'Application';
 
-    auth.check = function () {
-        return $auth.isAuthenticated();
-    };
+            $scope.toggle = function () {
+                $mdSidenav('left').toggle();
+            }
 
-    auth.login = function (credentials) {
-        return $auth
-        .login(
-            credentials
-        )
-        .then(function (response) {
-            console.log(response);
-            // $location.path('/');
-        });
-    };
+            $scope.check = function () {
+                return AuthService.check();
+            }
 
-    auth.register = function (data) {
-        return $auth
-        .signUp(
-            credentials
-        )
-        .then(function (response) {
-            console.log(response);
-            // $location.path('/');
-        });
-    };
+            $scope.logout = function () {
+                var success = AuthService.logout();
 
-    auth.logout = function () {
-        return $auth
-            .logout();
-    };
+                $scope.toggle();
 
-    return auth;
-});
+                if (success) {
+                    $location.path('/home');
+                }
+            }
+        }
+    ]
+);
 
 app
-.controller('ApplicationController', ['$scope', '$cookies', '$mdSidenav', 'AuthService', function ($scope, $cookies, $mdSidenav, AuthService) {
-    $scope.title = 'Application';
-
-    $scope.toggle = function () {
-        $mdSidenav('left').toggle();
-    }
-
-    $scope.laravel = function ()
-    {
-        return $cookies.get('XSRF-TOKEN');
-    }
-
-    $scope.logout = function () {
-        return AuthService.logout();
-    }
-
-    $scope.check = function () {
-        return AuthService.check();
-    }
-}]);
-
-app
-.controller('AuthController', ['$scope', 'AuthService', function ($scope, AuthService) {
+.controller('AuthController', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
     $scope.title = 'Auth';
 
     $scope.credentials = {
@@ -540,16 +621,45 @@ app
     };
 
     $scope.login = function (credentials) {
-        return AuthService.login(credentials);
+        AuthService
+            .login(
+                credentials
+            )
+            .then(function (response) {
+                $location.path('/profile');
+            })
+            .catch(function (response) {
+                console.error(response);
+            });
     };
 
     $scope.register = function (credentials) {
-        return AuthService.register(credentials);
+        AuthService
+            .register(
+                credentials
+            )
+            .then(function (response) {
+                AuthService
+                    .signin(
+                        response.data.token
+                    );
+
+                $location.path('/profile');
+            })
+            .catch(function (response) {
+                console.error(response);
+            });
     };
 }]);
 
 app
-.controller('HomeController', ['$scope', function ($scope) {
+.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.title = 'Home';
 }]);
+
+app
+.controller('ProfileController', ['$scope', function ($scope) {
+    $scope.title = 'Profile';
+}]);
+
 //# sourceMappingURL=app.js.map

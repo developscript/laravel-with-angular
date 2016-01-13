@@ -1,5 +1,5 @@
 app
-.controller('AuthController', ['$scope', 'AuthService', function ($scope, AuthService) {
+.controller('AuthController', ['$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
     $scope.title = 'Auth';
 
     $scope.credentials = {
@@ -10,10 +10,33 @@ app
     };
 
     $scope.login = function (credentials) {
-        return AuthService.login(credentials);
+        AuthService
+            .login(
+                credentials
+            )
+            .then(function (response) {
+                $location.path('/profile');
+            })
+            .catch(function (response) {
+                console.error(response);
+            });
     };
 
     $scope.register = function (credentials) {
-        return AuthService.register(credentials);
+        AuthService
+            .register(
+                credentials
+            )
+            .then(function (response) {
+                AuthService
+                    .signin(
+                        response.data.token
+                    );
+
+                $location.path('/profile');
+            })
+            .catch(function (response) {
+                console.error(response);
+            });
     };
 }]);

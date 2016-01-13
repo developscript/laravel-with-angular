@@ -1,4 +1,4 @@
 app
-.controller('HomeController', ['$scope', function ($scope) {
+.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.title = 'Home';
 }]);

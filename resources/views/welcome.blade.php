@@ -47,7 +47,7 @@
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
             <md-list>
 
-                <md-list-item ng-href="/#/home" ng-click="toggle()">
+                <md-list-item ng-href="/#/" ng-click="toggle()">
                     <p>Home</p>
                 </md-list-item>
 
@@ -64,7 +64,11 @@
                 </div>
                 <div ng-if="check()">
 
-                    <md-list-item ng-href="#" ng-click="logout()">
+                    <md-list-item ng-href="/#/profile" ng-click="toggle()">
+                        <p>Profile</p>
+                    </md-list-item>
+
+                    <md-list-item ng-click="logout()">
                         <p>Logout</p>
                     </md-list-item>
 

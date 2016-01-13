@@ -1,5 +1,6 @@
 app
-.config(function ($routeProvider, $authProvider) {
+.config(function ($httpProvider, $routeProvider, $authProvider) {
+    $httpProvider.interceptors.push('RequestInterceptor');
 
     $authProvider.loginUrl = '/api/login';
     $authProvider.signupUrl = '/api/register';
@@ -13,10 +14,11 @@ app
         }
     )
     .when(
-        '/login', 
+        '/login',
         {
             templateUrl: '/view/login',
             controller: 'AuthController',
+            token: false,
         }
     )
     .when(
@@ -24,6 +26,15 @@ app
         {
             templateUrl: '/view/register',
             controller: 'AuthController',
+            token: false,
+        }
+    )
+    .when(
+        '/profile',
+        {
+            templateUrl: '/view/profile',
+            controller: 'ProfileController',
+            token: true,
         }
     )
     .otherwise('/');
