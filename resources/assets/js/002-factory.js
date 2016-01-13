@@ -13,7 +13,7 @@ app
         )
         .then(function (response) {
             console.log(response);
-            $location.path('/');
+            // $location.path('/');
         });
     };
 
@@ -24,7 +24,7 @@ app
         )
         .then(function (response) {
             console.log(response);
-            $location.path('/');
+            // $location.path('/');
         });
     };
 

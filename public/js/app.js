@@ -483,7 +483,7 @@ app
         )
         .then(function (response) {
             console.log(response);
-            $location.path('/');
+            // $location.path('/');
         });
     };
 
@@ -494,7 +494,7 @@ app
         )
         .then(function (response) {
             console.log(response);
-            $location.path('/');
+            // $location.path('/');
         });
     };
 
@@ -521,6 +521,10 @@ app
 
     $scope.logout = function () {
         return AuthService.logout();
+    }
+
+    $scope.check = function () {
+        return AuthService.check();
     }
 }]);
 

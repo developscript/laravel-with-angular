@@ -28,15 +28,15 @@ Route::get('/', function () {
 
 Route::group(
     [
-        'middleware' => [
-            'web'
-        ]
+        'prefix' => 'view',
     ],
     function () {
         //
         Route::group(
             [
-                'prefix' => 'view',
+                'middleware' => [
+                    'web'
+                ],
             ],
             function () {
                 //
@@ -46,16 +46,26 @@ Route::group(
                 Route::get('/register', 'Auth\AuthController@getRegister');
             }
         );
+    }
+);
+
+Route::group(
+    [
+        'prefix' => 'api',
+    ],
+    function () {
+        //
+        Route::post('/login', 'Auth\AuthController@postLogin');
+        Route::post('/register', 'Auth\AuthController@postRegister');
 
         Route::group(
             [
-                'prefix' => 'api',
+                'middleware' => [
+                    'auth'
+                ]
             ],
             function () {
                 //
-                Route::post('/login', 'Auth\AuthController@postLogin');
-                Route::post('/register', 'Auth\AuthController@postRegister');
-
                 Route::get('/logout', 'Auth\AuthController@getLogout');
             }
         );

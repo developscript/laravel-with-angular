@@ -14,4 +14,8 @@ app
     $scope.logout = function () {
         return AuthService.logout();
     }
+
+    $scope.check = function () {
+        return AuthService.check();
+    }
 }]);

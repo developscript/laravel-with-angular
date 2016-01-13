@@ -70,16 +70,8 @@
 
                 </div>
 
-                @if (Auth::check())
-                    Logged in.
-                @else
-                    Logged out.
-                @endif
-
             </md-list>
         </md-sidenav>
-
-        {{ laravel() }}
 
         <ng-view>
         </ng-view>
