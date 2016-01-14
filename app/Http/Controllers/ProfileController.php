@@ -9,7 +9,6 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ProfileController extends Controller
 {
-    //
     public function __construct()
     {
         $this->middleware(
@@ -20,5 +19,15 @@ class ProfileController extends Controller
     public function getIndex()
     {
         return View('profile.index');
+    }
+
+    public function postUser()
+    {
+        if ($user = JWTAuth::toUser(JWTAuth::getToken())) {
+            return response()
+                ->json(
+                    compact('user')
+                );
+        }
     }
 }

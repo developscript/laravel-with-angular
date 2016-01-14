@@ -56,6 +56,8 @@ Route::group(
                 //
                 Route::post('/login', 'Authentication\AuthController@postLogin');
                 Route::post('/register', 'Authentication\AuthController@postRegister');
+
+                Route::get('/profile/show', 'ProfileController@postShow');
             }
         );
     }
