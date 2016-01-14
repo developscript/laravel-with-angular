@@ -92,7 +92,7 @@ php artisan migrate --seed
 
 ### Run
 
-You should now be able to serve your application with artisan and login. The migration provides a default account for testing, but you can create your own in register page.
+You should now be able to serve your application with artisan and login. A database seeder provides an account for testing, but you can create your own.
 
 ### User
 
