@@ -12,7 +12,7 @@ No description at the moment.
 ## Features
 - Laravel 5.2 [releases notes](https://laravel.com/docs/5.2/releases).
 - JSON Web Token Authentication.
-- Login attempts.
+- Basic brute force prevention
 - Middleware for routes where tokens are prohibited.
 
 ## Dependencies
@@ -92,7 +92,7 @@ php artisan migrate --seed
 
 ### Run
 
-You should now be able to serve your application with artisan and login in. The migration provides a default account for testing, but you can create your own in register page.
+You should now be able to serve your application with artisan and login. The migration provides a default account for testing, but you can create your own in register page.
 
 ### User
 
