@@ -32,7 +32,7 @@
                 </md-button>
 
                 <h2>
-                  <span>Welcome, {{ user.name }}</span>
+                  <span>Application</span>
                 </h2>
 
                 <span flex></span>
@@ -77,7 +77,7 @@
             </md-list>
         </md-sidenav>
 
-        <ng-view>
+        <ng-view flex>
         </ng-view>
 
     </body>
