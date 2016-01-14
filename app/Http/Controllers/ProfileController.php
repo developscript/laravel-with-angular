@@ -21,7 +21,7 @@ class ProfileController extends Controller
         return View('profile.index');
     }
 
-    public function postUser()
+    public function postShow()
     {
         if ($user = JWTAuth::toUser(JWTAuth::getToken())) {
             return response()
