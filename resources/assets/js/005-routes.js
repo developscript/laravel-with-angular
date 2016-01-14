@@ -1,5 +1,5 @@
 app
-.config(function ($httpProvider, $routeProvider, $authProvider) {
+.config(function ($httpProvider, $routeProvider, $authProvider, $locationProvider) {
     $httpProvider.interceptors.push('RequestInterceptor');
 
     $authProvider.loginUrl = '/api/login';
@@ -37,5 +37,17 @@ app
             token: true,
         }
     )
-    .otherwise('/');
+    .when(
+        '/logout',
+        {
+            template: '',
+            controller: 'LogoutController',
+            token: true,
+        }
+    )
+    .otherwise({
+        redirectTo: '/',
+    });
+
+    $locationProvider.html5Mode(true);
 });
