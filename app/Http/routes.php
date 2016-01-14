@@ -36,10 +36,23 @@ Route::group(
         //
         Route::group(
             [
+                'prefix' => 'directive',
+            ],
+            function () {
+                Route::get('/sidenav', function () {
+                    return View('directive.sidenav');
+                });
+                Route::get('/toolbar', function () {
+                    return View('directive.toolbar');
+                });
+            }
+        );
+
+        Route::group(
+            [
                 'prefix' => 'view',
             ],
             function () {
-                //
                 Route::get('/home', 'HomeController@index');
 
                 Route::get('/login', 'Authentication\AuthController@getLogin');
@@ -48,12 +61,12 @@ Route::group(
                 Route::get('/profile', 'ProfileController@getIndex');
             }
         );
+
         Route::group(
             [
                 'prefix' => 'api',
             ],
             function () {
-                //
                 Route::post('/login', 'Authentication\AuthController@postLogin');
                 Route::post('/register', 'Authentication\AuthController@postRegister');
 
