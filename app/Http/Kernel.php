@@ -50,5 +50,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'token' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
         'refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class,
+        'unidentified' => \App\Http\Middleware\RedirectIfHasToken::class,
     ];
 }
