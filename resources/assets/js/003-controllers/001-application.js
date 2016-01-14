@@ -4,14 +4,9 @@ app
         '$scope',
         '$cookies',
         '$location',
-        '$mdSidenav',
         'AuthService',
-        function ($scope, $cookies, $location, $mdSidenav, AuthService) {
+        function ($scope, $cookies, $location, AuthService) {
             $scope.title = 'Application';
-
-            $scope.toggle = function () {
-                $mdSidenav('left').toggle();
-            }
 
             $scope.check = function () {
                 return AuthService.check();
