@@ -8,6 +8,7 @@ No description at the moment.
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Installing](#installing)
+- [Optional](#optional)
 
 ## Features
 - Laravel 5.2 [releases notes](https://laravel.com/docs/5.2/releases).
@@ -97,3 +98,11 @@ You should now be able to serve your application with artisan and login. A datab
 ### User
 
 laravel@gmail.com / laravel
+
+## Optional
+
+Use the following command to generate an ide helper file with [laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper), it provides an accurate autocompletion for laravel 5:
+
+```
+php artisan ide-helper:generate
+```
